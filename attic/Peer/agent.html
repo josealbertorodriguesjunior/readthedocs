@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="../../_static/customcss/bootstrap-social.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/customcss/fontawesome-all.css" type="text/css" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
 
     
 
@@ -61,101 +62,75 @@
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="top" title="Subutai Documentation v6.x" href="../../index.html" /> 
   </head>
-  <body role="document">
-    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="../../index.html"><img style="height: 30px;" src="../../_static/logo.png"></a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown visible-xs">
-                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
-                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
-                <ul>
-<li><a class="reference internal" href="#">Subutai Agent</a><ul>
-<li><a class="reference internal" href="#overview">Overview</a><ul>
-<li><a class="reference internal" href="#initialization">Initialization</a></li>
-<li><a class="reference internal" href="#connection-to-subutai-management-server">Connection to Subutai Management Server</a></li>
-<li><a class="reference internal" href="#heartbeat">Heartbeat</a></li>
-<li><a class="reference internal" href="#request-response">Request/Response</a></li>
-<li><a class="reference internal" href="#command-execution">Command execution</a></li>
-<li><a class="reference internal" href="#alerts">Alerts</a></li>
-<li><a class="reference internal" href="#restore-container-state">Restore container state</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#agent-commands">Agent Commands</a><ul>
-<li><a class="reference internal" href="#attach">attach</a></li>
-<li><a class="reference internal" href="#backup">backup</a></li>
-<li><a class="reference internal" href="#batch">batch</a></li>
-<li><a class="reference internal" href="#clone">clone</a></li>
-<li><a class="reference internal" href="#cleanup">cleanup</a></li>
-<li><a class="reference internal" href="#config">config</a></li>
-<li><a class="reference internal" href="#daemon">daemon</a></li>
-<li><a class="reference internal" href="#demote">demote</a></li>
-<li><a class="reference internal" href="#destroy">destroy</a></li>
-<li><a class="reference internal" href="#export">export</a></li>
-<li><a class="reference internal" href="#hostname">hostname</a></li>
-<li><a class="reference internal" href="#info">info</a></li>
-<li><a class="reference internal" href="#import">import</a></li>
-<li><a class="reference internal" href="#list">list</a></li>
-<li><a class="reference internal" href="#metrics">metrics</a></li>
-<li><a class="reference internal" href="#p2p">p2p</a></li>
-<li><a class="reference internal" href="#promote">promote</a></li>
-<li><a class="reference internal" href="#proxy">proxy</a></li>
-<li><a class="reference internal" href="#quota">quota</a></li>
-<li><a class="reference internal" href="#rename">rename</a></li>
-<li><a class="reference internal" href="#restore">restore</a></li>
-<li><a class="reference internal" href="#start">start</a></li>
-<li><a class="reference internal" href="#stop">stop</a></li>
-<li><a class="reference internal" href="#tunnel">tunnel</a></li>
-<li><a class="reference internal" href="#update">update</a></li>
-<li><a class="reference internal" href="#vxlan">vxlan</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+  <body role="document" style="font-family: 'Maven Pro' sans-serif;">
 
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img alt="logo" src="_static/logo.png" width="160"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="https://subutai.io/about.html"><h4 style="font-size: 14px; color: #fff; font-weight: 700;">P2P Cloud Platform</h4></a></li>
+          <li><a href="https://subutai.io/goodwill.html"><h4 style="font-size: 14px; color: #fff; font-weight: 700;">GoodWill</h4></a></li>
+          
+          <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Ideation<span class="caret"></span></h4></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://subutai.io/manifesto.html"><h4 style="font-size: 14px; font-weight: 700;">Manifesto</h4></a></li>
+                  <li><a href="https://subutai.blog/"><h4 style="font-size: 14px; font-weight: 700;">Blog</h4></a></li>
+                  <li><a href="https://subutai.io/tribute.html"><h4 style="font-size: 14px; font-weight: 700;">Tribute</h4></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA"><h4 style="font-size: 14px; font-weight: 700;">Presentation</h4></a></li>
+                  <li><a href="#"><h4 style="font-size: 14px; font-weight: 700;">Lexicon</h4></a></li>
                 </ul>
               </li>
 
-            
-              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
-            
-            <li class="visible-xs"><a href="../../_sources/attic/Peer/agent.rst.txt" rel="nofollow">Show Source</a></li>
+          <li><a href="#get-started"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Getting Started</h4></a></li>
+          
+          <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Resources<span class="caret"></span></h4></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://github.com/search?utf8=%E2%9C%93&q=subutai&type=??"><h4 style="font-size: 14px; font-weight: 700;">GitHub</h4></a></li>
+                  <li><a href="https://subutai.io/install/tutorials.html" ><h4 style="font-size: 14px; font-weight: 700;">Tutorials</h4></a></li>
+                  <li><a href="https://github.com/subutai-blueprints"><h4 style="font-size: 14px; font-weight: 700;">Blueprints</h4></a></li>
+                  <li><a href="https://subutai.io/how-can-i-help.html"><h4 style="font-size: 14px; font-weight: 700;">Get Involved</h4></a></li>
+                  <li><a href="https://subutai.blog/"><h4 style="font-size: 14px; font-weight: 700;">Use Cases</h4></a></li>
+                </ul>
+              </li>
 
-            <li class="visible-xs">
-                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
-                  <div class="input-append input-group">
-                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
-                    <span class="input-group-btn">
-                    <input type="submit" class="btn" value="Go" />
-                    </span>
-                  </div>
-                  <input type="hidden" name="check_keywords" value="yes" />
-                  <input type="hidden" name="area" value="default" />
-                </form>
-            </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><h4 style="font-size: 14px;color: #fff; font-weight: 700;">Community<span class="caret"></span></h4></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://subutai.io/how-can-i-help.html"><h4 style="font-size: 14px; font-weight: 700;">Get Involved</h4></a></li>
+                  <li><a href="https://slack.subut.ai/ "><h4 style="font-size: 14px; font-weight: 700;">Slack</h4></a></li>
+                  <li><a href="https://telegram.org/"><h4 style="font-size: 14px; font-weight: 700;">Telegram</h4></a></li>
+                  <li><a href="https://twitter.com/SubutaiCloud"><h4 style="font-size: 14px; font-weight: 700;">Twitter</h4></a></li>
+                  <li><a href="https://www.reddit.com/r/LXD/comments/5wwhs2/subutai_social_peertopeer_social_cloud_computing/"><h4 style="font-size: 14px; font-weight: 700;">Reddit</h4></a></li>
+                  <li><a href="https://www.facebook.com/subutaicloud"><h4 style="font-size: 14px; font-weight: 700;">Facebook</h4></a></li>
+                  <li><a href="https://www.linkedin.com/company/subutai-social-cloud/"><h4 style="font-size: 14px; font-weight: 700;">Linkedin</h4></a></li>
+                  <li><a href="https://www.youtube.com/channel/UCISHGzbHjYWYFfu7krnYLkA"><h4 style="font-size: 14px; font-weight: 700;">Youtube</h4></a></li>
+                </ul>
+              </li>
 
-            
-
-          </ul>
-
-        </div>
+        </ul>
       </div>
     </div>
+  </nav>
+
+
     
 
     <!-- container -->
     <div class="container-fluid">
-
+      <br/>
+      <br/>
       <!-- row -->
       <div class="row">
          
