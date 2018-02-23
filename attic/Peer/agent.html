@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Subutai Agent &mdash; Subutai Documentation v6.x</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--Custom CSS from J&J-->
+    <link rel="stylesheet" href="../../_static/customcss/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customcss/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customcss/bootstrap-social.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customcss/fontawesome-all.css" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+
+
+
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '6.4',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Subutai Documentation v6.x" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html"><img style="height: 30px;" src="../../_static/logo.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Subutai Agent</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#initialization">Initialization</a></li>
+<li><a class="reference internal" href="#connection-to-subutai-management-server">Connection to Subutai Management Server</a></li>
+<li><a class="reference internal" href="#heartbeat">Heartbeat</a></li>
+<li><a class="reference internal" href="#request-response">Request/Response</a></li>
+<li><a class="reference internal" href="#command-execution">Command execution</a></li>
+<li><a class="reference internal" href="#alerts">Alerts</a></li>
+<li><a class="reference internal" href="#restore-container-state">Restore container state</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#agent-commands">Agent Commands</a><ul>
+<li><a class="reference internal" href="#attach">attach</a></li>
+<li><a class="reference internal" href="#backup">backup</a></li>
+<li><a class="reference internal" href="#batch">batch</a></li>
+<li><a class="reference internal" href="#clone">clone</a></li>
+<li><a class="reference internal" href="#cleanup">cleanup</a></li>
+<li><a class="reference internal" href="#config">config</a></li>
+<li><a class="reference internal" href="#daemon">daemon</a></li>
+<li><a class="reference internal" href="#demote">demote</a></li>
+<li><a class="reference internal" href="#destroy">destroy</a></li>
+<li><a class="reference internal" href="#export">export</a></li>
+<li><a class="reference internal" href="#hostname">hostname</a></li>
+<li><a class="reference internal" href="#info">info</a></li>
+<li><a class="reference internal" href="#import">import</a></li>
+<li><a class="reference internal" href="#list">list</a></li>
+<li><a class="reference internal" href="#metrics">metrics</a></li>
+<li><a class="reference internal" href="#p2p">p2p</a></li>
+<li><a class="reference internal" href="#promote">promote</a></li>
+<li><a class="reference internal" href="#proxy">proxy</a></li>
+<li><a class="reference internal" href="#quota">quota</a></li>
+<li><a class="reference internal" href="#rename">rename</a></li>
+<li><a class="reference internal" href="#restore">restore</a></li>
+<li><a class="reference internal" href="#start">start</a></li>
+<li><a class="reference internal" href="#stop">stop</a></li>
+<li><a class="reference internal" href="#tunnel">tunnel</a></li>
+<li><a class="reference internal" href="#update">update</a></li>
+<li><a class="reference internal" href="#vxlan">vxlan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/attic/Peer/agent.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Subutai Agent</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a><ul>
+<li><a class="reference internal" href="#initialization">Initialization</a></li>
+<li><a class="reference internal" href="#connection-to-subutai-management-server">Connection to Subutai Management Server</a></li>
+<li><a class="reference internal" href="#heartbeat">Heartbeat</a></li>
+<li><a class="reference internal" href="#request-response">Request/Response</a></li>
+<li><a class="reference internal" href="#command-execution">Command execution</a></li>
+<li><a class="reference internal" href="#alerts">Alerts</a></li>
+<li><a class="reference internal" href="#restore-container-state">Restore container state</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#agent-commands">Agent Commands</a><ul>
+<li><a class="reference internal" href="#attach">attach</a></li>
+<li><a class="reference internal" href="#backup">backup</a></li>
+<li><a class="reference internal" href="#batch">batch</a></li>
+<li><a class="reference internal" href="#clone">clone</a></li>
+<li><a class="reference internal" href="#cleanup">cleanup</a></li>
+<li><a class="reference internal" href="#config">config</a></li>
+<li><a class="reference internal" href="#daemon">daemon</a></li>
+<li><a class="reference internal" href="#demote">demote</a></li>
+<li><a class="reference internal" href="#destroy">destroy</a></li>
+<li><a class="reference internal" href="#export">export</a></li>
+<li><a class="reference internal" href="#hostname">hostname</a></li>
+<li><a class="reference internal" href="#info">info</a></li>
+<li><a class="reference internal" href="#import">import</a></li>
+<li><a class="reference internal" href="#list">list</a></li>
+<li><a class="reference internal" href="#metrics">metrics</a></li>
+<li><a class="reference internal" href="#p2p">p2p</a></li>
+<li><a class="reference internal" href="#promote">promote</a></li>
+<li><a class="reference internal" href="#proxy">proxy</a></li>
+<li><a class="reference internal" href="#quota">quota</a></li>
+<li><a class="reference internal" href="#rename">rename</a></li>
+<li><a class="reference internal" href="#restore">restore</a></li>
+<li><a class="reference internal" href="#start">start</a></li>
+<li><a class="reference internal" href="#stop">stop</a></li>
+<li><a class="reference internal" href="#tunnel">tunnel</a></li>
+<li><a class="reference internal" href="#update">update</a></li>
+<li><a class="reference internal" href="#vxlan">vxlan</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/attic/Peer/agent.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="subutai-agent">
+<h1>Subutai Agent<a class="headerlink" href="#subutai-agent" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Subutai Social Agent</strong> performs low level operations on <strong>Resource Hosts</strong>.</p>
+<p>It communicates with a <strong>Management Server</strong>, and executes the required commands to control LXC containers.</p>
+<div class="section" id="initialization">
+<h3>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h3>
+<p>The first step of Subutai Agent initialization involves reading its config file to load its required parameters.</p>
+<p>After starting, the Subutai Agent generates the required GPG-keys and SSL-certificates. If keys have already been generated the Agent reuses them.</p>
+<p>When all parameters have been configured, it connects to the Management Server.</p>
+<p>After initialization the Agent service starts goroutines for:</p>
+<ul class="simple">
+<li>Collecting system performance metrics and store them in a time-series database - InfluxDB;</li>
+<li>Monitoring connections to the Management Server, and reconnecting the Agent if required;</li>
+<li>Processing alert events to send notifications to the Management Server;</li>
+<li>Checking SSH-tunnels and recreating fresh ones if existing connections break;</li>
+<li>Sending heartbeats to the Management Server;</li>
+</ul>
+<p>After all background services start initialization completes. All these goroutines continue working independently in the background.</p>
+</div>
+<div class="section" id="connection-to-subutai-management-server">
+<h3>Connection to Subutai Management Server<a class="headerlink" href="#connection-to-subutai-management-server" title="Permalink to this headline">¶</a></h3>
+<p>The primary aim of the Subutai Agent is to interact with the Management Server.</p>
+<p>Before getting requests from the Management Server the Agent should be connected to it. After sending a connection request the Resource Host must be approved by an administrator of the peer from the Management Server’s Web UI.</p>
+<p>After initialization, the Subutai Agent checks to see if the Management Server is available. After this step the Agent tries to verify if this Resource Host has already been approved and is ready to perform work:</p>
+<ol class="arabic simple">
+<li>If the Management Server is reachable and the Resource Host is already approved - the Agent starts normal operations;</li>
+<li>If the Management Server is reachable and the Resource Host is not approved - the Agent sends a connection request to be approved;</li>
+</ol>
+<p>The connection request to the Management Server is JSON with following fields:</p>
+<ul class="simple">
+<li>ID;</li>
+<li>Hostname;</li>
+<li>Public GPG-key;</li>
+<li>Public SSL-cert;</li>
+<li>Secret;</li>
+<li>List of network interfaces;</li>
+<li>Host architecture;</li>
+<li>List of LXC containers;</li>
+</ul>
+<p>The Agent keeps periodically sending connection requests until the Management server accept one with a required HTTP status. When the request is accepted, the Agent still keeps checking until the RH is approved.</p>
+<p>If any of steps fail the Subutai Agent will continue retrying until it gets a successful response.</p>
+<p>The connection step requires approval for security reasons to prevent the addition of forbidden hosts to peer. The connection request exchanges GPG-keys between the Subutai Agent and the Management Server.</p>
+<p>After approving the Resource Host all interconnections between the Management Server and the Subutai Agent will be secured by a bi-directionally authenticated SSL connection.</p>
+<p>The Subutai Agent tracks the connection state to the Management Server and reinitializes it if required.</p>
+</div>
+<div class="section" id="heartbeat">
+<h3>Heartbeat<a class="headerlink" href="#heartbeat" title="Permalink to this headline">¶</a></h3>
+<p>When the Subutai Agent has initialized and is connected to the Management Server it starts sending heartbeats periodically.</p>
+<p>Every 30 seconds the Subutai Agent checks if any new information can be transferred to the Management Server.</p>
+<p>Every heartbeat is a JSON message with following fields:</p>
+<ul class="simple">
+<li>ID;</li>
+<li>Type;</li>
+<li>Hostname;</li>
+<li>Architecture;</li>
+<li>Instance type;</li>
+<li>List of containers;</li>
+<li>List of network interfaces;</li>
+<li>List of active alerts;</li>
+</ul>
+<p>The Subutai Agent sends a full heartbeat after each reconnect to Management Server. After this, it sends heartbeats only with changes ignoring duplicates. On the Subutai Agent process exiting it sends additional force heartbeat to update Management Server.</p>
+<p>In addition to checking for changes on every heartbeat (every 30 seconds), the Subutai Agent preemptively issues a new heartbeat after any action requested by the Management Server. For example, if the Management Server sends a command to clone a container, the Agent will send its heartbeat immediately instead of waiting for the next scheduled time to send the changes immediately.</p>
+<p>Since requests from the Management Server can be processed in parallel we use additional throttling techniques to reduce load: if the previous heartbeat was sent less then 5 seconds ago and an action is taken, instead of sending a new heartbeat immediately we delay it for 5 seconds. This tactic keeps load from heartbeat operations low to be able to respond to Management Server requests quickly.</p>
+<p>The Subutai Agent repeats sending heartbeat to the Management Server until get accept status.</p>
+<p>We are planning to add sending incremental changes in the heartbeat to prevent sending full heartbeat every time.</p>
+</div>
+<div class="section" id="request-response">
+<h3>Request/Response<a class="headerlink" href="#request-response" title="Permalink to this headline">¶</a></h3>
+<p>The Subutai Agent listens on a port <strong>7070</strong> to respond to commands.</p>
+<p>The Management Server uses this HTTP service send commands to the Agent. The following endpoints are used:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">/trigger</span></code> - to force the Agent to get a list of new commands;</li>
+<li><code class="docutils literal notranslate"><span class="pre">/ping</span></code> - to check if the Agent is alive;</li>
+<li><code class="docutils literal notranslate"><span class="pre">/heartbeat</span></code> - to force sending heartbeat before the next scheduled time.</li>
+</ul>
+<p>When the Management Server triggers the Agent to pull new commands, the Agent can get one or several commands from the queue if present. Received commands may be executed in parallel without waiting others before them to finish.</p>
+<p>When a single command is executed, the Agent collects stdout and stderr outputs, the exit code of the command and sends it back to Management Server in the response.</p>
+</div>
+<div class="section" id="command-execution">
+<h3>Command execution<a class="headerlink" href="#command-execution" title="Permalink to this headline">¶</a></h3>
+<p>The Management Server can set a time limit for command execution. The command will be interrupted when the time limit is reached.</p>
+<p>The command could be sent in <code class="docutils literal notranslate"><span class="pre">daemon</span></code> mode. In this case the command will be never be interrupted.</p>
+<p>Commands can be executed on the Resource Host or on any of its containers.</p>
+</div>
+<div class="section" id="alerts">
+<h3>Alerts<a class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h3>
+<p>The Subutai Agent continuously collects information about the system and containers.</p>
+<p>Following information is collected for monitoring:</p>
+<ul class="simple">
+<li>CPU load;</li>
+<li>RAM usage;</li>
+<li>Disk usage.</li>
+</ul>
+<p>The Subutai Agent collects the latest data in memory to optimize performance for generating alerts. Only containers with set thresholds will be processed by the alert system.</p>
+<p>If any available alert information will be sent to the Management Server within the next heartbeat. Alerts of exceeding thresholds will keep being delivered while above the limit.</p>
+</div>
+<div class="section" id="restore-container-state">
+<h3>Restore container state<a class="headerlink" href="#restore-container-state" title="Permalink to this headline">¶</a></h3>
+<p>When new containers are cloned and started, each container stores its state in the special file. The Subutai Agent reads this state periodically to restore the container to its intended state if different.</p>
+<p>So if a container was started, after system restart the Subutai Agent will start all containers that were active. Stopped containers will be kept in the stopped state.</p>
+<p>A special protection mechanism is used to restore system to its intended state. If a container is broken, the Subutai Agent tries to restore its state 5 times with some delay. If not successful, the container is marked as broken and future restore operations are abandoned the broken container.</p>
+</div>
+</div>
+<div class="section" id="agent-commands">
+<h2>Agent Commands<a class="headerlink" href="#agent-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="attach">
+<span id="subutai-agent-attach"></span><h3>attach<a class="headerlink" href="#attach" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">attach</span> <span class="pre">[options]</span> <span class="pre">&lt;container</span> <span class="pre">name&gt;</span></code> - attach to container</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">clear</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span>     <span class="n">attach</span> <span class="k">with</span> <span class="n">clear</span> <span class="n">environment</span>
+<span class="o">--</span><span class="n">x86</span><span class="p">,</span> <span class="o">-</span><span class="n">x</span>       <span class="n">use</span> <span class="n">x86</span> <span class="n">personality</span>
+<span class="o">--</span><span class="n">regular</span><span class="p">,</span> <span class="o">-</span><span class="n">r</span>   <span class="n">connect</span> <span class="k">as</span> <span class="n">regular</span> <span class="n">user</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">attach</span> <span class="n">container1</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Allows user to use container’s TTY. <code class="docutils literal notranslate"><span class="pre">&lt;container</span> <span class="pre">name&gt;</span></code> - should be available
+running Subutai container, otherwise command will return error message and
+non-zero exit code. This command is <strong>not fully implemented</strong>, please use
+lxc-attach &lt;container name&gt; command instead.</p>
+</div>
+<div class="section" id="backup">
+<span id="subutai-agent-backup"></span><h3>backup<a class="headerlink" href="#backup" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">backup</span> <span class="pre">[options]</span> <span class="pre">&lt;container</span> <span class="pre">name&gt;</span></code> - backup Subutai container</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">full</span><span class="p">,</span> <span class="o">-</span><span class="n">f</span>  <span class="n">make</span> <span class="n">full</span> <span class="n">backup</span>
+<span class="o">--</span><span class="n">stop</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span>  <span class="n">stop</span> <span class="n">container</span> <span class="n">at</span> <span class="n">the</span> <span class="n">time</span> <span class="n">of</span> <span class="n">backup</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">backup</span> <span class="pre">container1</span></code></p>
+<p>Description:</p>
+<p>Subutai backup takes a snapshots of each container’s volume and stores it in the <code class="docutils literal notranslate"><span class="pre">/mnt/backups/container_name/datetime/</span></code> directory.</p>
+<p>A full backup creates a delta-file of each BTRFS subvolume. An incremental backup (default) creates a delta-file with the difference of changes between the current and last snapshots.</p>
+<p>All deltas are compressed to archives in <code class="docutils literal notranslate"><span class="pre">/mnt/backups/</span></code> directory (<code class="docutils literal notranslate"><span class="pre">container_datetime.tar.gz</span></code> or <code class="docutils literal notranslate"><span class="pre">container_datetime_Full.tar.gz</span></code> for full backup).</p>
+<p>A changelog file can be found next to backups archive (container_datetime_changelog.txt or container_datetime_Full_changelog.txt) which contains a list of changes made between two backups.</p>
+</div>
+<div class="section" id="batch">
+<span id="subutai-agent-batch"></span><h3>batch<a class="headerlink" href="#batch" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">-json</span> <span class="pre">&lt;json</span> <span class="pre">command&gt;</span></code> - batch commands execution</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">batch</span> <span class="o">-</span><span class="n">json</span> \
+    <span class="s1">&#39;[{&quot;action&quot;: &quot;clone&quot;, &quot;args&quot;: [&quot;master&quot;, &quot;container1&quot;]}, {&quot;action&quot;: &quot;clone&quot;, &quot;args&quot;: [&quot;master&quot;, &quot;container2&quot;]}]&#39;</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The batch binding provides a mechanism to perform several Subutai commands in the container in batch, passed in a single JSON message. Initially, the purpose of this command was internal for SS &lt;-&gt; Agent communication, yet it may be invoked manually from the CLI. The response from a batch command returns a JSON array with each element representing the results (response) from each command (request) in the batch: the positions of responses correlate with the request position in the array:</p>
+<p>requesting localhost system information and IP address:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">batch</span> <span class="o">-</span><span class="n">json</span> \
+    <span class="s1">&#39;[{&quot;action&quot;: &quot;info&quot;, &quot;args&quot;: [&quot;system&quot;, &quot;localhost&quot;]}, {&quot;action&quot;: &quot;info&quot;, &quot;args&quot;: [&quot;ipaddr&quot;]}]&#39;</span>
+</pre></div>
+</div>
+<p>first element in response array is system information, second - IP address:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[{</span>
+    <span class="s2">&quot;output&quot;</span><span class="p">:</span> <span class="s2">&quot;{</span>
+    <span class="s2">&quot;host&quot;</span><span class="p">:</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;CPU&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;model&quot;</span><span class="p">:</span><span class="s2">&quot; Intel(R) Core(TM) i7-4510U CPU @ 2.00GHz&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;coreCount&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+        <span class="s2">&quot;idle&quot;</span><span class="p">:</span><span class="mf">97.79661016949153</span><span class="p">,</span>
+        <span class="s2">&quot;frequency&quot;</span><span class="p">:</span><span class="s2">&quot; 1995.380&quot;</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;Disk&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;total&quot;</span><span class="p">:</span><span class="mi">107374182400</span><span class="p">,</span>
+        <span class="s2">&quot;used&quot;</span><span class="p">:</span><span class="mi">4024963072</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;RAM&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;free&quot;</span><span class="p">:</span><span class="mi">118759424</span><span class="p">,</span>
+        <span class="s2">&quot;total&quot;</span><span class="p">:</span><span class="mi">2098094080</span>
+    <span class="p">}}</span><span class="s2">&quot;,</span>
+    <span class="s2">&quot;exitcode&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+    <span class="p">},</span> <span class="p">{</span>
+        <span class="s2">&quot;output&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.0.101&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;exitcode&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+<span class="p">}]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="clone">
+<span id="subutai-agent-clone"></span><h3>clone<a class="headerlink" href="#clone" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">clone</span> <span class="pre">[options]</span> <span class="pre">&lt;template&gt;</span> <span class="pre">&lt;container&gt;</span></code> - clone Subutai container</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">ipaddr</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;&lt;IPv4&gt;/&lt;mask&gt; &lt;vlan tag&gt;&quot;</span>             <span class="nb">set</span> <span class="n">container</span> <span class="n">IP</span> <span class="n">address</span> <span class="ow">and</span> <span class="n">VLAN</span>
+<span class="o">--</span><span class="n">env</span><span class="p">,</span> <span class="o">-</span><span class="n">e</span> <span class="o">&lt;</span><span class="n">string</span> <span class="nb">id</span><span class="o">&gt;</span>                               <span class="nb">set</span> <span class="n">environment</span> <span class="nb">id</span> <span class="k">for</span> <span class="n">container</span>
+<span class="o">--</span><span class="n">token</span><span class="p">,</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">token</span><span class="o">&gt;</span>                          <span class="n">token</span> <span class="n">to</span> <span class="n">verify</span> <span class="k">with</span> <span class="n">MH</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">clone</span> <span class="n">master</span> <span class="n">container1</span>
+<span class="n">subutai</span> <span class="n">clone</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;192.168.0.200/24 10&quot;</span> <span class="n">zabbix</span> <span class="n">z1</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The clone command creates new <code class="docutils literal notranslate"><span class="pre">&lt;container&gt;</span></code> from a Subutai <code class="docutils literal notranslate"><span class="pre">&lt;template&gt;</span></code>.
+If the specified template argument is not deployed in system, Subutai first tries to import it, and if import succeeds, it then continues to clone from the imported template image. By default, clone will use the NAT-ed network interface with IP address received from the Subutai DHCP server, but this behavior can be changed with command options described below.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">-i</span></code> option is defined, separate bridge interface will be created in
+specified VLAN and new container will receive static IP address.</p>
+<p>Option <code class="docutils literal notranslate"><span class="pre">-e</span></code> writes the environment ID string inside new container.
+Option <code class="docutils literal notranslate"><span class="pre">-t</span></code> is intended to check the origin of new container creation
+request during environment build. This is one of the security checks which
+makes sure that each container creation request is authorized by registered user.</p>
+<p>The clone options are not intended for manual use: unless you’re confident
+about what you’re doing. Use default clone format without additional options
+to create Subutai containers.</p>
+</div>
+<div class="section" id="cleanup">
+<span id="subutai-agent-cleanup"></span><h3>cleanup<a class="headerlink" href="#cleanup" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">cleanup</span> <span class="pre">&lt;vlan</span> <span class="pre">tag&gt;</span></code> - completely destroys a Subutai environment along with all assets associated with it</p>
+<p>Example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">cleanup</span> <span class="pre">101</span></code></p>
+<p>Description:</p>
+<p>The cleanup command takes the environment’s VLAN tag as its only argument. It performs a number of operations on the system to remove all resources associated with the environment and its tag components: containers, network interfaces, proxy service configurations, environment statistics, etc.</p>
+</div>
+<div class="section" id="config">
+<span id="subutai-agent-config"></span><h3>config<a class="headerlink" href="#config" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">config</span> <span class="pre">&lt;container&gt;</span> <span class="pre">[options]</span></code> - edit container config</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">operation</span><span class="p">,</span> <span class="o">-</span><span class="n">o</span> <span class="o">&lt;</span><span class="n">add</span><span class="o">|</span><span class="k">del</span><span class="o">&gt;</span>   <span class="n">operation</span>
+<span class="o">--</span><span class="n">key</span><span class="p">,</span> <span class="o">-</span><span class="n">k</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">key</span><span class="o">&gt;</span>  <span class="n">configuration</span> <span class="n">key</span>
+<span class="o">--</span><span class="n">value</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">value</span><span class="o">&gt;</span>  <span class="n">configuration</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">config</span> <span class="pre">container1</span> <span class="pre">-o</span> <span class="pre">add</span> <span class="pre">-k</span> <span class="pre">&quot;user.key&quot;</span> <span class="pre">-v</span> <span class="pre">&quot;user.value&quot;</span></code></p>
+<p>Description:</p>
+<p>Config binding allows read and write container’s configuration file through command line.</p>
+</div>
+<div class="section" id="daemon">
+<span id="subutai-agent-daemon"></span><h3>daemon<a class="headerlink" href="#daemon" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">daemon</span></code> - starts the Subutai agent</p>
+<p>Description:</p>
+<p>The daemon command starts the Subutai agent process. On startup the daemon immediately attempts to establish a connection with the SS Management Service on the peer.</p>
+</div>
+<div class="section" id="demote">
+<span id="subutai-agent-demote"></span><h3>demote<a class="headerlink" href="#demote" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">demote</span> <span class="pre">[options]</span> <span class="pre">&lt;template&gt;</span></code> - demote a Subutai template</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">ipaddr</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;&lt;IPv4&gt;/&lt;mask&gt;&quot;</span>       <span class="n">IP</span> <span class="n">address</span>
+<span class="o">--</span><span class="n">vlan</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">string</span> <span class="nb">id</span><span class="o">&gt;</span>             <span class="n">VLAN</span> <span class="n">tag</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">demote</span> <span class="n">master</span>
+<span class="n">subutai</span> <span class="n">demote</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;10.10.0.100/24&quot;</span> <span class="n">openjre8</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>A Subutai template is a “locked down” container only to be used for cloning purposes. It cannot be started, and its file system cannot be modified: it’s read-only. Normal operational containers are promoted into templates, but sometimes you might want to demote them back to regular containers. This is what the demote sub command does: it reverts a template without children back into a normal container.</p>
+<p>Demoted container will use NAT network interface and dynamic IP address if opposite options are not specified.</p>
+</div>
+<div class="section" id="destroy">
+<span id="subutai-agent-destroy"></span><h3>destroy<a class="headerlink" href="#destroy" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">destroy</span> <span class="pre">&lt;instance&gt;</span> <span class="pre">[options]</span></code> - destroys a Subutai container or template</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">vlan</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span>  <span class="n">destroy</span> <span class="n">environment</span> <span class="n">by</span> <span class="n">VLAN</span> <span class="n">tag</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">destroy</span> <span class="n">container1</span>
+<span class="n">subutai</span> <span class="n">destroy</span> <span class="mi">101</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Simply removes every resource associated with a Subutai container or template: data, network, configs, etc.</p>
+<p>The destroy command always runs each step in “force” mode to provide reliable deletion results; even if some instance components were already removed, the destroy command will continue to perform all operations once again while ignoring possible underlying errors: i.e. missing configuration files.
+Flag <code class="docutils literal notranslate"><span class="pre">-v</span></code> tells to the command to consider passed argument as environment VLAN tag and destroy all related components, such as containers, network interfaces, gateways, proxy configurations, etc.</p>
+</div>
+<div class="section" id="export">
+<span id="subutai-agent-export"></span><h3>export<a class="headerlink" href="#export" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">[options]</span> <span class="pre">&lt;container&gt;</span></code> - exports a Subutai container</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">version</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">version</span><span class="o">&gt;</span>  <span class="n">template</span> <span class="n">version</span>
+<span class="o">--</span><span class="n">size</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">size</span><span class="o">&gt;</span>        <span class="n">template</span> <span class="n">preferred</span> <span class="n">size</span> <span class="p">(</span><span class="s2">&quot;tiny&quot;</span><span class="p">,</span> <span class="s2">&quot;small&quot;</span><span class="p">,</span> <span class="s2">&quot;medium&quot;</span><span class="p">,</span> <span class="s2">&quot;large&quot;</span><span class="p">,</span> <span class="s2">&quot;huge&quot;</span><span class="p">)</span>
+<span class="o">--</span><span class="n">token</span><span class="p">,</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">token</span><span class="o">&gt;</span>             <span class="n">sets</span> <span class="n">the</span> <span class="n">user</span> <span class="n">token</span> <span class="k">for</span> <span class="n">uploading</span> <span class="n">template</span> <span class="n">to</span> <span class="n">Kurjun</span> <span class="n">server</span>
+<span class="o">--</span><span class="n">private</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span>                   <span class="n">flag</span> <span class="n">sets</span> <span class="n">the</span> <span class="n">private</span> <span class="n">option</span> <span class="k">for</span> <span class="n">template</span> <span class="n">on</span> <span class="n">Kurjun</span> <span class="n">server</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">export</span> <span class="n">container1</span>
+<span class="n">subutai</span> <span class="n">export</span> <span class="o">-</span><span class="n">v</span> <span class="mf">1.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">beta</span> <span class="o">-</span><span class="n">s</span> <span class="n">medium</span> <span class="n">container2</span>
+<span class="n">subutai</span> <span class="n">export</span> <span class="n">c1</span> <span class="o">-</span><span class="n">t</span> <span class="mi">637</span><span class="n">b4cb391f0189adfe77ab4b3b4a85730a6f0af13b3751c491b2665d3118770</span> <span class="o">-</span><span class="n">p</span>
+<span class="n">subutai</span> <span class="n">export</span> <span class="n">c2</span> <span class="o">-</span><span class="n">t</span> <span class="mi">637</span><span class="n">b4cb391f0189adfe77ab4b3b4a85730a6f0af13b3751c491b2665d3118770</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The export sub command prepares an archive from a template in the <code class="docutils literal notranslate"><span class="pre">/mnt/lib/lxc/tmpdir/</span></code> path. This archive can be moved to another Subutai peer and deployed as ready-to-use template or uploaded to Subutai’s global template repository to make it widely available for others to use.</p>
+<p>Export consist of two steps if the target is a container: container promotion to template (see “promote” command) and packing the template into the archive. If already a template just the packing of the archive takes place.</p>
+<p>Configuration values for template metadata parameters can be overridden on export, like the recommended container size when the template is cloned using -s option. The template’s version can also specified on export so the import command can use it to request specific versions.</p>
+</div>
+<div class="section" id="hostname">
+<span id="subutai-agent-hostname"></span><h3>hostname<a class="headerlink" href="#hostname" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">hostname</span> <span class="pre">&lt;container</span> <span class="pre">name&gt;</span> <span class="pre">&lt;new</span> <span class="pre">name&gt;</span></code> - sets the hostname of a container</p>
+<p><code class="docutils literal notranslate"><span class="pre">hostname</span> <span class="pre">&lt;new</span> <span class="pre">RH</span> <span class="pre">name&gt;</span></code> - sets the hostname of a RH</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">hostname</span> <span class="n">container1</span> <span class="n">c1</span>
+
+<span class="n">subutai</span> <span class="n">hostname</span> <span class="n">RH1</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Hostname command changes container or RH configs to apply a new name for the it. Used for internal SS purposes.</p>
+</div>
+<div class="section" id="info">
+<span id="subutai-agent-info"></span><h3>info<a class="headerlink" href="#info" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">info</span> <span class="pre">&lt;options&gt;</span> <span class="pre">&lt;hostname&gt;</span></code> - get information about host system</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ipaddr</span>    <span class="n">shows</span> <span class="n">host</span> <span class="n">external</span> <span class="n">IP</span> <span class="n">address</span>
+<span class="n">system</span>     <span class="n">system</span> <span class="n">common</span> <span class="n">information</span>
+<span class="n">quota</span>    <span class="n">container</span><span class="s1">&#39;s resource quota</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">info</span> <span class="n">system</span> <span class="n">localhost</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The info command’s purposed is to display common system information, such as external IP address to access the container host, quotas, its CPU model, RAM size, etc. It’s mainly used for internal SS needs.</p>
+</div>
+<div class="section" id="import">
+<span id="subutai-agent-import"></span><h3>import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">[options]</span> <span class="pre">&lt;template&gt;</span></code> - import a Subutai template</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">torrent</span>                        <span class="n">use</span> <span class="n">BitTorrent</span> <span class="k">for</span> <span class="n">downloading</span> <span class="p">(</span><span class="n">experimental</span><span class="p">)</span>
+<span class="o">--</span><span class="n">version</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">version</span><span class="o">&gt;</span>   <span class="n">template</span> <span class="n">version</span>
+<span class="o">--</span><span class="n">token</span><span class="p">,</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">token</span><span class="o">&gt;</span>       <span class="n">token</span> <span class="n">to</span> <span class="n">access</span> <span class="n">private</span> <span class="n">templates</span> <span class="ow">in</span> <span class="k">global</span> <span class="n">repository</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="kn">import</span> <span class="nn">master</span>
+<span class="n">subutai</span> <span class="kn">import</span> <span class="o">-</span><span class="n">v</span> <span class="mf">4.0</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">dev</span> <span class="n">management</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The import command deploys a Subutai template on a Resource Host. The import algorithm works with both the global template repository and a local directory to provide more flexibility to enable working with published and custom local templates. Official published templates in the global repository have a overriding scope over custom local artifacts if there’s any template naming conflict.</p>
+<p>If Internet access is lost, or it is not possible to upload custom templates to the repository, the filesystem path <code class="docutils literal notranslate"><span class="pre">/mnt/lib/lxc/tmpdir/</span></code> could be used as local repository; the import sub command checks this directory if a requested published template or the global repository is not available.</p>
+<p>The import binding handles security checks to confirm the authenticity and integrity of templates. Besides using strict SSL connections for downloads, it verifies the fingerprint and its checksum for each template: an MD5 hash sum signed with author’s GPG key. Import executes different integrity and authenticity checks of the template transparent to the user to protect system integrity from all possible risks related to template data transfers over the network.</p>
+<p>The template’s version may be specified with the <code class="docutils literal notranslate"><span class="pre">-v</span></code> option. By default import retrieves the latest available template version from repository.</p>
+<p>The repository supports public, group private (shared), and private files. Import without specifying a security token can only access public templates.</p>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">import</span> <span class="pre">management</span></code> is a special operation which differs from the import of other templates. Besides the usual template deployment operations, “import management” demotes the template, starts its container, transforms the host network, and forwards a few host ports, etc.</p>
+</div>
+<div class="section" id="list">
+<span id="subutai-agent-list"></span><h3>list<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">list</span> <span class="pre">[options]</span></code> - lists Subutai instances</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">container</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span>   <span class="n">containers</span> <span class="n">only</span>
+<span class="o">--</span><span class="n">template</span><span class="p">,</span> <span class="o">-</span><span class="n">t</span>    <span class="n">templates</span> <span class="n">only</span>
+<span class="o">--</span><span class="n">info</span><span class="p">,</span> <span class="o">-</span><span class="n">i</span>        <span class="n">detailed</span> <span class="n">container</span> <span class="n">info</span>
+<span class="o">--</span><span class="n">ancestor</span><span class="p">,</span> <span class="o">-</span><span class="n">a</span>    <span class="k">with</span> <span class="n">ancestors</span>
+<span class="o">--</span><span class="n">parent</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span>      <span class="k">with</span> <span class="n">parent</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="nb">list</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">subutai</span> <span class="nb">list</span> <span class="o">-</span><span class="n">t</span> <span class="o">-</span><span class="n">p</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The list command shows a listing of Subutai instances with information such as IP address, parent template, etc.</p>
+</div>
+<div class="section" id="metrics">
+<span id="subutai-agent-metrics"></span><h3>metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">metrics</span> <span class="pre">-s</span> <span class="pre">&lt;start</span> <span class="pre">date&gt;</span> <span class="pre">-e</span> <span class="pre">&lt;end</span> <span class="pre">date&gt;</span> <span class="pre">&lt;instance&gt;</span></code> - get instance metrics</p>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">metrics</span> <span class="n">localhost</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot;2016-10-18 09:00:00&quot;</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;2016-10-18 10:30:00&quot;</span>
+<span class="n">subutai</span> <span class="n">metrics</span> <span class="n">container1</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot;2016-10-12 04:30:00&quot;</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;2016-10-18 22:40:00&quot;</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The metrics command retrieves monitoring data from a time-series database deployed in the SS Management server for container hosts and Resource Hosts. Statistics are being collected by the Subutai daemon and includes common information like CPU utilization, network load, RAM and disk usage for both containers and hosts. Since the database is located on the SS Management Host, hosts which are not a part of a Subutai peer have no access to this information.</p>
+<p>Data aggregation in the time-series database has following configuration:</p>
+<ul class="simple">
+<li>last hour statistic is stored “as is”</li>
+<li>last day data aggregates to 1 minute interval</li>
+<li>last week is in 5 minute intervals</li>
+</ul>
+<p>After 7 days all statistics is are overwritten by new incoming data.</p>
+</div>
+<div class="section" id="p2p">
+<span id="subutai-agent-p2p"></span><h3>p2p<a class="headerlink" href="#p2p" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">p2p</span> <span class="pre">&lt;options&gt;</span> <span class="pre">[arguments]</span></code> - P2P network operations</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">create</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span>        <span class="n">create</span> <span class="n">p2p</span> <span class="n">instance</span> <span class="p">(</span><span class="n">interfaceName</span> <span class="nb">hash</span> <span class="n">key</span> <span class="n">ttl</span> <span class="n">localPeepIPAddr</span> <span class="n">portRange</span><span class="p">)</span>
+<span class="o">--</span><span class="n">delete</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span>        <span class="n">delete</span> <span class="n">p2p</span> <span class="n">instance</span> <span class="n">by</span> <span class="n">swarm</span> <span class="nb">hash</span>
+<span class="o">--</span><span class="n">update</span><span class="p">,</span> <span class="o">-</span><span class="n">u</span>        <span class="n">update</span> <span class="n">p2p</span> <span class="n">instance</span> <span class="n">encryption</span> <span class="n">key</span> <span class="p">(</span><span class="nb">hash</span> <span class="n">newkey</span> <span class="n">ttl</span><span class="p">)</span>
+<span class="o">--</span><span class="nb">list</span><span class="p">,</span> <span class="o">-</span><span class="n">l</span>          <span class="nb">list</span> <span class="n">of</span> <span class="n">p2p</span> <span class="n">instances</span>
+<span class="o">--</span><span class="n">peers</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span>         <span class="nb">list</span> <span class="n">of</span> <span class="n">p2p</span> <span class="n">swarm</span> <span class="n">participants</span> <span class="n">by</span> <span class="nb">hash</span>
+<span class="o">--</span><span class="n">version</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span>       <span class="nb">print</span> <span class="n">p2p</span> <span class="n">version</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">p2p</span> <span class="o">-</span><span class="n">c</span> <span class="n">p2p</span><span class="o">-</span><span class="n">net1</span> <span class="n">swarm</span><span class="o">-</span><span class="mi">12345678</span><span class="o">-</span><span class="n">abcd</span><span class="o">-</span><span class="mi">1234</span><span class="o">-</span><span class="n">efgh</span><span class="o">-</span><span class="mi">123456789012</span> <span class="mi">0123456789</span><span class="n">qwertyu0123456789zxcvbn</span> <span class="mi">1476870551</span> <span class="mf">10.220</span><span class="o">.</span><span class="mf">22.1</span> <span class="mi">0</span><span class="o">-</span><span class="mi">65535</span>
+</pre></div>
+</div>
+<p>Descriptions:</p>
+<p>Subutai’s p2p command controls and configures the peer-to-peer network structure: the swarm which includes all hosts with same the same swarm hash and secret key. P2P is a base layer for Subutai environment networking: all containers in same environment are connected to each other via VXLAN tunnels and are accesses as if they were in one LAN. It doesn’t matter where the containers are physically located.</p>
+</div>
+<div class="section" id="promote">
+<span id="subutai-agent-promote"></span><h3>promote<a class="headerlink" href="#promote" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">promote</span> <span class="pre">&lt;container&gt;</span></code> - promote Subutai container to a template</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">source</span><span class="p">,</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot;&lt;container&gt;&quot;</span>              <span class="nb">set</span> <span class="n">source</span> <span class="n">container</span> <span class="k">for</span> <span class="n">promoting</span><span class="o">.</span> <span class="n">Note</span><span class="p">:</span> <span class="n">source</span> <span class="n">container</span> <span class="n">will</span> <span class="n">be</span> <span class="n">stopped</span> <span class="ow">and</span> <span class="n">started</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">promote</span> <span class="n">container1</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The promote binding turns a Subutai container into container template which may be cloned with “clone” command. Promote executes several simple steps, such as dropping a container’s configuration to default values, dumping the list of installed packages (this step requires the target container to still be running), and setting the container’s filesystem to read-only to prevent changes.</p>
+</div>
+<div class="section" id="proxy">
+<span id="subutai-agent-proxy"></span><h3>proxy<a class="headerlink" href="#proxy" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">proxy</span> <span class="pre">&lt;add|check|del&gt;</span> <span class="pre">&lt;vlan</span> <span class="pre">tag&gt;</span> <span class="pre">&lt;options&gt;</span></code> - Subutai reverse proxy configuration</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Add</span> <span class="p">:</span>
+<span class="o">--</span><span class="n">domain</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">domain</span><span class="o">&gt;</span>        <span class="n">add</span> <span class="n">domain</span> <span class="n">to</span> <span class="n">VLAN</span>
+<span class="o">--</span><span class="n">host</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">IP</span><span class="o">&gt;</span>              <span class="n">add</span> <span class="n">host</span> <span class="n">to</span> <span class="n">domain</span> <span class="n">on</span> <span class="n">VLAN</span>
+<span class="o">--</span><span class="n">policy</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">policy</span><span class="o">&gt;</span>        <span class="nb">set</span> <span class="n">load</span> <span class="n">balance</span> <span class="n">policy</span> <span class="p">(</span><span class="n">rr</span><span class="o">|</span><span class="n">lb</span><span class="o">|</span><span class="nb">hash</span><span class="p">)</span>
+<span class="o">--</span><span class="n">file</span><span class="p">,</span> <span class="o">-</span><span class="n">f</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="o">.</span><span class="n">pem</span> <span class="n">file</span><span class="o">&gt;</span>      <span class="n">pem</span> <span class="n">certificate</span> <span class="n">file</span>
+
+<span class="n">Del</span><span class="p">:</span>
+<span class="o">--</span><span class="n">domain</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span>                <span class="n">delete</span> <span class="n">domain</span> <span class="kn">from</span> <span class="nn">VLAN</span>
+<span class="o">--</span><span class="n">host</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">IP</span><span class="o">&gt;</span>      <span class="n">delete</span> <span class="n">host</span> <span class="kn">from</span> <span class="nn">domain</span> <span class="n">on</span> <span class="n">VLAN</span>
+
+<span class="n">Check</span><span class="p">:</span>
+<span class="o">--</span><span class="n">domain</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span>                <span class="n">check</span> <span class="n">domain</span> <span class="n">on</span> <span class="n">VLAN</span>
+<span class="o">--</span><span class="n">host</span><span class="p">,</span> <span class="o">-</span><span class="n">h</span> <span class="o">&lt;</span><span class="n">string</span> <span class="n">IP</span><span class="o">&gt;</span>      <span class="n">check</span> <span class="n">hosts</span> <span class="ow">in</span> <span class="n">domain</span> <span class="n">on</span> <span class="n">vlan</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">proxy</span> <span class="n">add</span> <span class="mi">100</span> <span class="o">-</span><span class="n">d</span> <span class="n">example</span><span class="o">.</span><span class="n">com</span>
+<span class="n">subutai</span> <span class="n">proxy</span> <span class="n">check</span> <span class="mi">100</span> <span class="o">-</span><span class="n">d</span>
+<span class="n">subutai</span> <span class="n">proxy</span> <span class="n">add</span> <span class="mi">100</span> <span class="o">-</span><span class="n">h</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">0.20</span>
+<span class="n">subutai</span> <span class="n">proxy</span> <span class="n">check</span> <span class="mi">100</span> <span class="o">-</span><span class="n">h</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">0.20</span>
+<span class="n">subutai</span> <span class="n">proxy</span> <span class="k">del</span> <span class="mi">100</span> <span class="o">-</span><span class="n">d</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The reverse proxy component in Subutai provides and easy way to assign domain name and forward HTTP(S) traffic to certain environment.</p>
+<p>The proxy binding is used to manage Subutai reverse proxies. Each proxy subcommand works with config patterns: adding, removing or checking certain lines, and reloading the proxy daemon if needed, etc.</p>
+<p>The reverse proxy functionality supports three common load balancing strategies - round-robin, load based and “sticky” sessions. It can also accept SSL certificates in .pem file format and install it for a domain.</p>
+</div>
+<div class="section" id="quota">
+<span id="subutai-agent-quota"></span><h3>quota<a class="headerlink" href="#quota" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">quota</span> <span class="pre">[options]</span> <span class="pre">&lt;container&gt;</span> <span class="pre">&lt;resource&gt;</span> <span class="pre">-s</span> <span class="pre">&lt;quota&gt;</span></code> - sets resource quotas for Subutai containers</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">threshold</span><span class="p">,</span> <span class="o">-</span><span class="n">t</span> <span class="o">&lt;</span><span class="n">percent</span><span class="o">&gt;</span> <span class="n">alert</span> <span class="n">threshold</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">quota</span> <span class="n">container1</span> <span class="n">ram</span>
+<span class="n">subutai</span> <span class="n">quota</span> <span class="n">container1</span> <span class="n">cpuset</span> <span class="o">-</span><span class="n">s</span> <span class="mi">0</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">subutai</span> <span class="n">quota</span> <span class="n">container1</span> <span class="n">rootfs</span> <span class="o">-</span><span class="n">s</span> <span class="mi">3</span> <span class="o">-</span><span class="n">t</span> <span class="mi">80</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Quota command controls container’s quotas and thresholds. Available resources:</p>
+<ul class="simple">
+<li>cpu, %</li>
+<li>cpuset, available cores</li>
+<li>ram, Mb</li>
+<li>network, Kbps</li>
+<li>rootfs/home/var/opt, Gb</li>
+</ul>
+<p>The threshold value represents a percentage for each resource. Once resource consumption exceeds this threshold it triggers an alert.</p>
+<p>The clone operation, sets no quotas and thresholds for new containers; quotas need to be configured with quota command after a clone operation.</p>
+</div>
+<div class="section" id="rename">
+<span id="subutai-agent-rename"></span><h3>rename<a class="headerlink" href="#rename" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">rename</span> <span class="pre">&lt;old</span> <span class="pre">name&gt;</span> <span class="pre">&lt;new</span> <span class="pre">name&gt;</span></code> - rename a Subutai container</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">rename</span> <span class="n">container1</span> <span class="n">c1</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Renames a Subutai container impacting filesystem paths, configuration values, etc.</p>
+</div>
+<div class="section" id="restore">
+<span id="subutai-agent-restore"></span><h3>restore<a class="headerlink" href="#restore" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">restore</span> <span class="pre">&lt;container&gt;</span> <span class="pre">-d</span> <span class="pre">&lt;Unix</span> <span class="pre">timestamp&gt;</span> <span class="pre">-c</span> <span class="pre">&lt;new</span> <span class="pre">container&gt;</span></code> - restore a Subutai container from a backup</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">restore</span> <span class="n">container1</span> <span class="o">-</span><span class="n">d</span> <span class="mi">1476938900</span> <span class="o">-</span><span class="n">c</span> <span class="n">container1</span><span class="o">-</span><span class="n">restored</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Restores a Subutai container to a snapshot at a specified timestamp if such a backup archive is available.</p>
+</div>
+<div class="section" id="start">
+<span id="subutai-agent-start"></span><h3>start<a class="headerlink" href="#start" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">&lt;container&gt;</span></code> - start a Subutai container</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">start</span> <span class="n">container1</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Starts a Subutai container and checks if container state changed to “running” or “starting”. If state is not changing for 60 seconds, then the “start” operation is considered to have failed.</p>
+</div>
+<div class="section" id="stop">
+<span id="subutai-agent-stop"></span><h3>stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">stop</span> <span class="pre">&lt;container&gt;</span></code> - stop a Subutai container</p>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">stop</span> <span class="n">container1</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Stops a Subutai container with an additional state check.</p>
+</div>
+<div class="section" id="tunnel">
+<span id="subutai-agent-tunnel"></span><h3>tunnel<a class="headerlink" href="#tunnel" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">tunnel</span> <span class="pre">&lt;add|del|list&gt;</span> <span class="pre">[options]</span></code> - SSH tunnel management</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">add</span> <span class="o">&lt;</span><span class="n">dst</span> <span class="n">IP</span><span class="o">&gt;</span><span class="p">:[</span><span class="n">port</span><span class="p">]</span> <span class="p">[</span><span class="n">ttl</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">g</span><span class="p">]</span>      <span class="n">add</span> <span class="n">ssh</span> <span class="n">tunnel</span>
+<span class="k">del</span> <span class="o">&lt;</span><span class="n">dst</span> <span class="n">socket</span><span class="o">&gt;</span>                    <span class="n">delete</span> <span class="n">ssh</span> <span class="n">tunnel</span>
+<span class="nb">list</span>                                <span class="nb">list</span> <span class="n">alive</span> <span class="n">ssh</span> <span class="n">tunnels</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">tunnel</span> <span class="n">add</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">0.20</span>
+<span class="n">subutai</span> <span class="n">tunnel</span> <span class="n">add</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">0.30</span><span class="p">:</span><span class="mi">8080</span> <span class="mi">300</span> <span class="o">-</span><span class="n">g</span>
+<span class="n">subutai</span> <span class="n">tunnel</span> <span class="k">del</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">0.30</span><span class="p">:</span><span class="mi">8080</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The tunnel feature is based on SSH tunnels and works in combination with Subutai Helpers and serves as an easy solution for bypassing NATs. In Subutai, tunnels are used to access the SS management server’s web UI from the Hub, and open direct connection to containers, etc. There are two types of channels - local (default), which is created from destination address to host and global (<code class="docutils literal notranslate"><span class="pre">-g</span></code> flag), from destination to Subutai Helper node. Tunnels may also be set to be permanent (default) or temporary (<code class="docutils literal notranslate"><span class="pre">ttl</span></code> in seconds). The default destination port is 22.</p>
+<p>Subutai tunnels have a continuous state checking mechanism which keeps opened tunnels alive and closes outdated tunnels to keep the system network connections clean. This mechanism may re-create a tunnel if it was dropped unintentionally (system reboot, network interruption, etc.), but newly created tunnels will have different “entrance” address.</p>
+</div>
+<div class="section" id="update">
+<span id="subutai-agent-update"></span><h3>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">update</span> <span class="pre">&lt;rh|container&gt;</span> <span class="pre">[options]</span></code> - update a Subutai container or host</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">check</span><span class="p">,</span> <span class="o">-</span><span class="n">c</span> <span class="n">check</span> <span class="k">if</span> <span class="n">update</span> <span class="ow">is</span> <span class="n">available</span> <span class="n">but</span> <span class="n">do</span> <span class="ow">not</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">update</span> <span class="n">container1</span>
+<span class="n">subutai</span> <span class="n">update</span> <span class="n">rh</span> <span class="o">-</span><span class="n">c</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>The update operation can be divided into two different types: container updates and Resource Host updates.</p>
+<p>Container updates simply perform apt-get <code class="docutils literal notranslate"><span class="pre">update</span></code> and <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> operations inside target containers without any extra commands. Since SS Management is just another container, the Subutai update command works fine with the management container too.</p>
+<p>The second type of update, a Resource Host update, checks the Subutai repository and compares available snap packages with those currently installed in the system and, if a newer version is found, it downloads and installs it. Please note, system security policies requires that such commands should be performed by the superuser manually, otherwise an application’s attempt to update itself will be blocked.</p>
+</div>
+<div class="section" id="vxlan">
+<span id="subutai-agent-vxlan"></span><h3>vxlan<a class="headerlink" href="#vxlan" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">subutai</span> <span class="pre">vxlan</span> <span class="pre">&lt;options&gt;</span> <span class="pre">&lt;arguments&gt;</span></code> - manage VXLAN tunnels</p>
+<p>Options:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">--</span><span class="n">create</span>    <span class="p">,</span> <span class="o">-</span><span class="n">c</span> <span class="n">value</span>      <span class="n">create</span> <span class="n">VXLAN</span> <span class="n">tunnel</span>
+<span class="o">--</span><span class="n">delete</span><span class="p">,</span> <span class="o">-</span><span class="n">d</span> <span class="n">value</span>      <span class="n">delete</span> <span class="n">VXLAN</span> <span class="n">tunnel</span>
+<span class="o">--</span><span class="nb">list</span><span class="p">,</span> <span class="o">-</span><span class="n">l</span>              <span class="nb">list</span> <span class="n">VXLAN</span> <span class="n">tunnels</span>
+<span class="o">--</span><span class="n">remoteip</span><span class="p">,</span> <span class="o">-</span><span class="n">r</span> <span class="n">value</span>    <span class="n">VXLAN</span> <span class="n">tunnel</span> <span class="n">remote</span> <span class="n">IP</span>
+<span class="o">--</span><span class="n">vlan</span><span class="p">,</span> <span class="o">--</span><span class="n">vl</span> <span class="n">value</span>      <span class="n">tunnel</span> <span class="n">VLAN</span>
+<span class="o">--</span><span class="n">vni</span><span class="p">,</span> <span class="o">-</span><span class="n">v</span> <span class="n">value</span>         <span class="n">VXLAN</span> <span class="n">tunnel</span> <span class="n">VNI</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">subutai</span> <span class="n">vxlan</span> <span class="o">--</span><span class="n">create</span> <span class="n">vxlan1</span> <span class="o">--</span><span class="n">remoteip</span> <span class="mf">10.220</span><span class="o">.</span><span class="mf">22.2</span> <span class="o">--</span><span class="n">vlan</span> <span class="mi">100</span> <span class="o">--</span><span class="n">vni</span> <span class="mi">12345</span>
+</pre></div>
+</div>
+<p>Description:</p>
+<p>Subutai VXLAN is network layer built on top of P2P swarms and intended to be environment communication bridges between physically separate hosts. Each Subutai environment has its own separate VXLAN tunnel so all internal network traffic goes through isolated channels, doesn’t matter if environment located on single peer or distributed between multiple peers.</p>
+<img alt="https://cloud.githubusercontent.com/assets/13515865/19625492/fc15aee6-993b-11e6-8676-f81490d805b7.png" src="https://cloud.githubusercontent.com/assets/13515865/19625492/fc15aee6-993b-11e6-8676-f81490d805b7.png" />
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+      <br/>
+      <!-- row -->
+      <div class="row cont-footer">
+        <footer>
+          <div class="cont-footer">
+            <div class="container" style="padding-top: 20px;">
+              <div class="row" style="">
+                <div class="col-lg-4">
+                  <div class="text-center">
+                    <img src="_static/img/optdyn.png" class="img" alt="Optdyn" width="150">
+                  </div>
+                </div>
+                
+                <div class="col-lg-4">
+                  <p>
+                      &copy; Copyright 2017, OptDyn Corp.
+                  </p>
+                  <p><a href="#">Privacy |</a> <a href="#">Terms of Use |</a> <a href="#"> Cookies</a></p>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="icons-cont-footer">
+                    <div class="text-center">
+                      <a href="https://twitter.com/SubutaiCloud" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                      <a href="https://www.facebook.com/subutaicloud" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                      <a href="https://www.reddit.com/r/LXD/comments/5wwhs2/subutai_social_peertopeer_social_cloud_computing" target="_blank"><i class="fa fa-reddit-square"></i></a>
+                      <a href="https://www.linkedin.com/company/subutai-social-cloud" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div><!-- /row -->
+
+      
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>

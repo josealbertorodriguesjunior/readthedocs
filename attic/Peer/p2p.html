@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+
+
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    
+    <title>Subutai P2P &mdash; Subutai Documentation v6.x</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!--Custom CSS from J&J-->
+    <link rel="stylesheet" href="../../_static/customcss/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customcss/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customcss/bootstrap-social.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/customcss/fontawesome-all.css" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+
+<link rel="stylesheet" href="../../_static/css/basicstrap-base.css" type="text/css" />
+<link rel="stylesheet" id="current-theme" href="../../_static/css/bootstrap3/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" id="current-adjust-theme" type="text/css" />
+
+
+
+
+
+<style type="text/css">
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+</style>
+
+<link rel="stylesheet" href="../../_static/css/basicstrap.css" type="text/css" />
+<link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+<script type="text/javascript">
+  var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:    '../../',
+            VERSION:     '6.4',
+            COLLAPSE_INDEX: false,
+            FILE_SUFFIX: '.html',
+            HAS_SOURCE:  true
+  };
+</script>
+    <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/js/bootstrap3.min.js"></script>
+<script type="text/javascript" src="../../_static/js/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../../_static/js/basicstrap.js"></script>
+<script type="text/javascript">
+</script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="top" title="Subutai Documentation v6.x" href="../../index.html" /> 
+  </head>
+  <body role="document">
+    <div id="navbar-top" class="navbar navbar-fixed-top navbar-inverse" role="navigation" aria-label="top navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../../index.html"><img style="height: 30px;" src="../../_static/logo.png"></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown visible-xs">
+                <a role="button" id="localToc" data-toggle="dropdown" data-target="#" href="#">Table Of Contents <b class="caret"></b></a>
+                <ul class="dropdown-menu localtoc sp-localtoc" role="menu" aria-labelledby="localToc">
+                <ul>
+<li><a class="reference internal" href="#">Subutai P2P</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#building-from-source">Building from source</a></li>
+<li><a class="reference internal" href="#running">Running</a><ul>
+<li><a class="reference internal" href="#modifying-network-behaviour">Modifying network behaviour</a></li>
+<li><a class="reference internal" href="#getting-information-about-network">Getting information about network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </ul>
+              </li>
+
+            
+              <li><a href="../../genindex.html" title="General Index" accesskey="I">index </a></li>
+            
+            <li class="visible-xs"><a href="../../_sources/attic/Peer/p2p.rst.txt" rel="nofollow">Show Source</a></li>
+
+            <li class="visible-xs">
+                <form class="search form-search form-inline navbar-form navbar-right sp-searchbox" action="../../search.html" method="get">
+                  <div class="input-append input-group">
+                    <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <input type="submit" class="btn" value="Go" />
+                    </span>
+                  </div>
+                  <input type="hidden" name="check_keywords" value="yes" />
+                  <input type="hidden" name="area" value="default" />
+                </form>
+            </li>
+
+            
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- container -->
+    <div class="container-fluid">
+
+      <!-- row -->
+      <div class="row">
+         
+<div class="col-md-3 hidden-xs" id="sidebar-wrapper">
+  <div class="sidebar hidden-xs" role="navigation" aria-label="main navigation">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Subutai P2P</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#building-from-source">Building from source</a></li>
+<li><a class="reference internal" href="#running">Running</a><ul>
+<li><a class="reference internal" href="#modifying-network-behaviour">Modifying network behaviour</a></li>
+<li><a class="reference internal" href="#getting-information-about-network">Getting information about network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/attic/Peer/p2p.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" role="search">
+  <h3>Quick search</h3>
+  <form class="search form-inline" action="../../search.html" method="get">
+      <div class="input-append input-group">
+        <input type="text" class="search-query form-control" name="q" placeholder="Search...">
+        <span class="input-group-btn">
+        <input type="submit" class="btn" value="Go" />
+        </span>
+      </div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+  </div>
+</div> 
+        
+
+        <div class="col-md-9" id="content-wrapper">
+          <div class="document" role="main">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body">
+                  
+  <div class="section" id="subutai-p2p">
+<h1>Subutai P2P<a class="headerlink" href="#subutai-p2p" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Subutai P2P is a tool used to build private mesh networks.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="building-from-source">
+<h3>Building from source<a class="headerlink" href="#building-from-source" title="Permalink to this headline">¶</a></h3>
+<p>p2p can be built simple by running <code class="docutils literal notranslate"><span class="pre">make</span></code> command under GNU/Linux. On other platform you can use <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">build</span></code> command. Make sure p2p dependencies installed first by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">go</span> <span class="n">get</span>
+</pre></div>
+</div>
+<p>By default, running <code class="docutils literal notranslate"><span class="pre">make</span></code> command on Linux will produce binaries for Windows and MacOS as well. If you don’t need them, simple run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">linux</span>
+</pre></div>
+</div>
+<p>However, simply running <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">build</span></code> will work too.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you’re building p2p with <code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">build</span></code> command, running <code class="docutils literal notranslate"><span class="pre">p2p</span> <span class="pre">version</span></code> will not display proper version, which is always based on latest tag</p>
+</div>
+</div>
+<div class="section" id="running">
+<h3>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">MacOS and Windows Operating Systems require additional software. For MacOS a <a class="reference external" href="http://tuntaposx.sourceforge.net/">TUN/TAP</a> driver should be installed. On Windows, <a class="reference external" href="https://openvpn.net/index.php/open-source/downloads.html">TAP-Windows NDIS-6</a> from OpenVPN suite should be installed.</p>
+</div>
+<p>p2p application is divided to two parts: daemon and client. Daemon is a special mode, which should be started as root:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p2p</span> <span class="n">daemon</span>
+</pre></div>
+</div>
+<p>It is better to start daemon in background. Daemon creates a local RPC server which waits for incoming commands from p2p client. Client is a control application that accepts command-line arguments, parses them and sends to a daemon. To get detailed help about p2p or any specific command you can use:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Show general help</span>
+<span class="n">p2p</span> <span class="n">help</span>
+<span class="c1"># Show detailed information about daemon subcommand</span>
+<span class="n">p2p</span> <span class="n">help</span> <span class="n">daemon</span>
+</pre></div>
+</div>
+<p>The bare minimum to start a p2p instance is to run p2p client with the following arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p2p</span> <span class="n">start</span> <span class="o">-</span><span class="n">ip</span> <span class="mf">10.10</span><span class="o">.</span><span class="mf">10.1</span> <span class="o">-</span><span class="nb">hash</span> <span class="n">myhash</span>
+</pre></div>
+</div>
+<p>This will start a p2p instance with hash <em>myhash</em>. Other network participants should provide the same hash in order to establish a network connection with your computer. The IP address provided as -ip argument will be used for a new TUN/TAP network interface.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In order to run on MacOS user should create additional configuration file named <strong>config.yaml</strong> with the following contents: <code class="docutils literal notranslate"><span class="pre">iptool:</span> <span class="pre">ifconfig</span></code>. This is required because MacOS doesn’t have <code class="docutils literal notranslate"><span class="pre">ip</span></code> tool like Linux does.</p>
+</div>
+<p>You can provide additional arguments during network start if you want to customize your network.</p>
+<p>Here is a list of supported arguments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>-dev &lt;NAME&gt; will create TAP-interface with provided name
+-dht &lt;HOST:PORT&gt; will use specified DHT server
+-fwd flag will force p2p to disable discovery of nearby hosts and will use proxy to pass
+    traffic. This will make your connection much slower in a case when proxy is overloaded.
+-mac &lt;HW_ADDR&gt; - created TAP-interface will have provided hardware address
+-port &lt;PORT&gt; - p2p will listen to this port for incoming connections
+-ports &lt;MIN-MAX&gt; - p2p will use specified range of ports for communication
+-ttl &lt;KEYTIME&gt; - specified AES-key will be used before specified timestamp. Note, that
+    this is not Time-To-Live!
+</pre></div>
+</div>
+<p>To stop p2p connection you should use <code class="docutils literal notranslate"><span class="pre">p2p</span> <span class="pre">stop</span> <span class="pre">-hash</span> <span class="pre">&lt;HASH&gt;</span></code> command with a hash of network you wish to stop. If you have multiple networks you want to stop - you should run this command multiple times for each hash. This will also remove network entry from save file and network will not be restored after daemon restart.</p>
+<div class="section" id="modifying-network-behaviour">
+<h4>Modifying network behaviour<a class="headerlink" href="#modifying-network-behaviour" title="Permalink to this headline">¶</a></h4>
+<p>You can use set command to modify particular network. You should specify hash of target network by providing hash argument. For example, if you want to set log level for network test-hash you should run the following command: <code class="docutils literal notranslate"><span class="pre">p2p</span> <span class="pre">-set</span> <span class="pre">-hash</span> <span class="pre">test-hash</span> <span class="pre">-log</span> <span class="pre">DEBUG</span></code>. Available log levels is <em>TRACE</em>, <em>DEBUG, *INFO, *WARNING</em>, <em>ERROR</em>.</p>
+<p>Also, set can be used to update crypto-key (for example, you may want to add some new AES-key, that will be used after current key become obsolete):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p2p</span> <span class="nb">set</span> <span class="o">-</span><span class="nb">hash</span> <span class="n">test</span><span class="o">-</span><span class="nb">hash</span> <span class="o">-</span><span class="n">key</span> <span class="n">MYNEWAESKEY</span> <span class="o">-</span><span class="n">ttl</span> <span class="n">TIMESTAMP</span>
+</pre></div>
+</div>
+<p>Command above will add provided key to a queue of keys.</p>
+</div>
+<div class="section" id="getting-information-about-network">
+<h4>Getting information about network<a class="headerlink" href="#getting-information-about-network" title="Permalink to this headline">¶</a></h4>
+<p>There is a set of commands available, that can be used to know status of p2p networks.</p>
+<p>p2p show displays overall information about network or about particular network/peer:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">p2p</span> <span class="n">show</span> <span class="n">will</span> <span class="n">display</span> <span class="n">information</span> <span class="n">about</span> <span class="n">active</span> <span class="n">networks</span><span class="p">:</span> <span class="n">TAP</span> <span class="n">Interface</span> <span class="n">MAC</span>
+    <span class="n">address</span><span class="p">,</span> <span class="n">IP</span> <span class="n">of</span> <span class="n">TAP</span> <span class="n">interface</span> <span class="ow">and</span> <span class="nb">hash</span>
+<span class="n">p2p</span> <span class="n">show</span> <span class="o">-</span><span class="nb">hash</span> <span class="o">&lt;</span><span class="n">HASH</span><span class="o">&gt;</span> <span class="n">will</span> <span class="n">display</span> <span class="n">information</span> <span class="n">about</span> <span class="n">specified</span> <span class="n">network</span> <span class="ow">in</span>
+    <span class="n">a</span> <span class="n">form</span> <span class="n">of</span> <span class="n">table</span> <span class="k">with</span> <span class="n">information</span> <span class="n">about</span> <span class="n">peers</span><span class="p">:</span> <span class="n">Peer</span> <span class="n">ID</span><span class="p">,</span> <span class="n">IP</span><span class="p">,</span> <span class="n">Endpoint</span> <span class="n">IP</span>
+    <span class="ow">and</span> <span class="n">MAC</span> <span class="n">address</span>
+<span class="n">p2p</span> <span class="n">show</span> <span class="o">-</span><span class="n">check</span> <span class="o">&lt;</span><span class="n">IP</span><span class="o">&gt;</span> <span class="n">will</span> <span class="n">display</span> <span class="n">integration</span> <span class="n">status</span> <span class="k">with</span> <span class="n">particular</span> <span class="n">peer</span><span class="o">.</span>
+    <span class="n">Also</span> <span class="n">it</span> <span class="n">will</span> <span class="k">return</span> <span class="n">zero</span> <span class="n">exit</span> <span class="n">code</span> <span class="k">if</span> <span class="n">peer</span> <span class="n">was</span> <span class="n">integrated</span> <span class="n">into</span> <span class="n">network</span>
+    <span class="p">(</span><span class="n">it</span> <span class="ow">is</span> <span class="n">known</span> <span class="n">to</span> <span class="n">our</span> <span class="n">p2p</span> <span class="n">client</span><span class="p">)</span> <span class="ow">or</span> <span class="n">non</span><span class="o">-</span><span class="n">zero</span> <span class="n">exit</span> <span class="n">code</span> <span class="k">if</span> <span class="n">it</span><span class="s1">&#39;s not</span>
+</pre></div>
+</div>
+<p>p2p status is another useful command that display status of all peers know to p2p client with parser-friendly information structure. Much like <code class="docutils literal notranslate"><span class="pre">p2p</span> <span class="pre">show</span> <span class="pre">-hash</span> <span class="pre">&lt;HASH&gt;</span></code>, but with some additional details, like latest error from peer communication</p>
+<p><code class="docutils literal notranslate"><span class="pre">p2p</span> <span class="pre">debug</span></code> also will show information about known peers as well as some internal information, that might be useful to p2p developers. If you run into any troubles - execute p2p debug and send it to developers as well as p2p version command output</p>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+      </div><!-- /row -->
+      <br/>
+      <!-- row -->
+      <div class="row cont-footer">
+        <footer>
+          <div class="cont-footer">
+            <div class="container" style="padding-top: 20px;">
+              <div class="row" style="">
+                <div class="col-lg-4">
+                  <div class="text-center">
+                    <img src="_static/img/optdyn.png" class="img" alt="Optdyn" width="150">
+                  </div>
+                </div>
+                
+                <div class="col-lg-4">
+                  <p>
+                      &copy; Copyright 2017, OptDyn Corp.
+                  </p>
+                  <p><a href="#">Privacy |</a> <a href="#">Terms of Use |</a> <a href="#"> Cookies</a></p>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="icons-cont-footer">
+                    <div class="text-center">
+                      <a href="https://twitter.com/SubutaiCloud" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                      <a href="https://www.facebook.com/subutaicloud" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                      <a href="https://www.reddit.com/r/LXD/comments/5wwhs2/subutai_social_peertopeer_social_cloud_computing" target="_blank"><i class="fa fa-reddit-square"></i></a>
+                      <a href="https://www.linkedin.com/company/subutai-social-cloud" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div><!-- /row -->
+
+      
+
+    </div>
+    <!-- /container -->
+
+  </body>
+</html>
