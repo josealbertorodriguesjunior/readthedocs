@@ -870,10 +870,8 @@ Flag <code class="docutils literal notranslate"><span class="pre">-v</span></cod
                 </div>
                 
                 <div class="col-lg-4">
-                  <p>
-                      &copy; Copyright 2017, OptDyn Corp.
-                  </p>
-                  <p><a href="#">Privacy |</a> <a href="#">Terms of Use |</a> <a href="#"> Cookies</a></p>
+                    <p>Copyright &copy; <span id="currentYear"></span> OptDyn. All rights reserved.</p>
+                    <p><a href="#">Privacy |</a> <a href="#">Terms of Use |</a> <a href="#"> Cookies</a></p>
                 </div>
 
                 <div class="col-lg-4">
@@ -896,6 +894,9 @@ Flag <code class="docutils literal notranslate"><span class="pre">-v</span></cod
 
     </div>
     <!-- /container -->
-
+    <script type="text/javascript">
+        var currentYear = (new Date()).getFullYear();
+        document.getElementById("currentYear").innerHTML = currentYear;
+    </script>
   </body>
 </html>
